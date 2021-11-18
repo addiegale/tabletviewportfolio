@@ -1,0 +1,156 @@
+body{
+	font-family: 'Inter', 'Times New Roman';
+	padding: 1.5%;
+	margin: 5.75%;
+	font-size:150%;
+}
+
+h1{
+	font-size: 1.75em; 
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.75;
+}
+
+h2{
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+	line-height: 2.15;
+}
+
+nav{
+	background-color: white;
+}
+
+nav a{
+	color: black;
+}
+
+nav li{
+	display: block;
+	padding: 5px;
+}
+
+nav li .current{
+	color: rgb(255, 0, 221);
+	font-weight: bold;
+	font-size: larger;
+}
+
+p, h1, h2 {
+	padding: 5px;
+}
+
+.contact{
+	padding-bottom: 30px;
+}
+
+.skip a{
+	background: white;
+	left: 0;
+	padding: 6px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+	position: absolute;
+	top: -40px;
+  
+  }
+  
+.skip a:focus{
+	position: absolute;
+	top: 0px;
+  }
+
+.gallery{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-row-gap: 12px;
+}
+
+.sports_photos{
+	grid-column: 1 / -1;
+	grid-row: 1 span 1;
+	padding: 5px;
+	border: .5px black solid;
+}
+
+.portrait_photos{
+	grid-column: 1 / -1;
+	grid-row: 3 span 1;
+	padding: 5px;
+	border: .5px black solid;
+}
+
+a:visited{color: black}
+
+main ul li{
+	list-style-type: disc;
+	line-height: 1.5;
+	padding: 5px;
+}
+
+.hp p, .startup p, .photo p, .sally p, .salad p{
+	font-style: italic;
+	text-align: center;
+}
+
+.hp h3, .startup h3, .photo h3, .sally h3, .salad h3, .clubs p{
+	text-align: center;
+	font-weight: bold;
+}
+
+.hp img, .startup img, .sally img, .salad img{
+	margin: auto;
+}
+
+.photo img{
+	margin: auto;
+	padding: 12px;
+}
+
+.projects h1{
+	font-size: 1.25em;
+	line-height: 1.5;
+}
+
+.projects h2{
+	font-weight: bold;
+	text-decoration: underline;
+	line-height: 2;
+}
+
+.projects img{
+	padding: 6px;
+}
+
+.professional p{
+	line-height: 1.5;
+	padding: 5px;
+}
+
+body > footer{
+	width:100%;
+	background-color: rgb(255, 145, 240);
+	padding-top: 10px;
+	min-height: 75px;
+	text-align:center;
+	color: black;
+	position: fixed;
+	margin: 0;
+	left: 0;
+	bottom: 0;
+}
+
+@media screen and (min-width: 850px){
+	.gallery{
+		display: grid;
+		
+	}
+
+	.picture1{
+
+	}
+}
