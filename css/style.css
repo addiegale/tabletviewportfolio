@@ -42,6 +42,10 @@ p, h1, h2 {
 	padding: 5px;
 }
 
+main{
+	margin-bottom: 1.5vw;
+}
+
 .contact{
 	padding-bottom: 30px;
 }
@@ -63,25 +67,23 @@ p, h1, h2 {
 	top: 0px;
   }
 
-.gallery{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
-	grid-row-gap: 12px;
+.sports_photos, .portrait_photos{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 12px;
 }
 
 .sports_photos{
 	grid-column: 1 / -1;
 	grid-row: 1 span 1;
 	padding: 5px;
-	border: .5px black solid;
 }
 
 .portrait_photos{
 	grid-column: 1 / -1;
 	grid-row: 3 span 1;
 	padding: 5px;
-	border: .5px black solid;
 }
 
 a:visited{color: black}
@@ -131,26 +133,22 @@ main ul li{
 	padding: 5px;
 }
 
-body > footer{
-	width:100%;
+.page-footer{
 	background-color: rgb(255, 145, 240);
 	padding-top: 10px;
-	min-height: 75px;
 	text-align:center;
 	color: black;
-	position: fixed;
-	margin: 0;
-	left: 0;
-	bottom: 0;
 }
 
 @media screen and (min-width: 850px){
-	.gallery{
+	.portrait_photos, .sports_photos{
 		display: grid;
-		
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1em;
 	}
 
-	.picture1{
-
+	.portrait_photos img, .sports_photos img{
+		object-fit: cover;
+		height: 100%
 	}
 }
