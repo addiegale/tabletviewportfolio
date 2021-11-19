@@ -19,10 +19,6 @@ h2{
 	line-height: 2.15;
 }
 
-nav{
-	background-color: white;
-}
-
 nav a{
 	color: black;
 }
@@ -32,14 +28,29 @@ nav li{
 	padding: 5px;
 }
 
-nav li .current{
+nav li [aria-current="page"]{
 	color: rgb(255, 0, 221);
 	font-weight: bold;
 	font-size: larger;
 }
 
+@media screen and (min-width: 700px){
+	nav ul{
+		width: 42ch;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 1.5em;
+	}
+}
+
 p, h1, h2 {
 	padding: 5px;
+	margin-bottom: 5px;
+}
+
+p{
+	line-height: 1.4;
 }
 
 main{
@@ -86,7 +97,7 @@ a:visited{color: black}
 
 main ul li{
 	list-style-type: disc;
-	line-height: 1.65;
+	line-height: 1.25;
 	padding: 5px;
 }
 
@@ -105,7 +116,7 @@ main ul li{
 }
 
 .photo img{
-	margin: auto;
+	margin: 0 auto;
 	padding: 12px;
 }
 
@@ -125,6 +136,7 @@ main ul li{
 
 .projects img{
 	padding: 6px;
+	margin: 0 auto;
 }
 
 .professional p{
@@ -132,14 +144,31 @@ main ul li{
 	padding: 5px;
 }
 
-.page-footer{
+section{
+	margin-bottom: 1em;
+}
+
+.page_footer{
 	background-color: rgb(255, 145, 240);
 	padding-top: 10px;
 	text-align:center;
 	color: black;
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 700px){
+	/* ABOUT PAGE */
+	.ag_about main{
+		display: flex;
+	}
+
+	.ag_about main img{
+		width: 50%;
+		height: 50%;
+		margin-left: 1em;
+	}
+	
+	/* PHOTOGRAPHY PAGE */
+	
 	.portrait_photos, .sports_photos{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -151,24 +180,30 @@ main ul li{
 		height: 100%
 	}
 
-	.aboutme p{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
 
-	.aboutme img{
-		width: 50%;
-	}
-
+	/* RESUME PAGE */
 	.hp img, .startup img, .sally img, .salad img, .photo img{
 		display: block;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0 auto;
 		width: 50%;
 	}
 
 	.hp img, .startup img{
 		width: 40%;
 	}
+
+	/* PROJECTS */
+	.projects img{
+		width: 40%;
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+	}
+
+	.projects{
+		margin: 0 auto;
+	}
+
+
 
 }
